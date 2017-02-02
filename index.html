@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geo</title>
+	<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+	<script src="js/jquery.js"></script>
+	
+
+	<script>
+	if (screen.width > 880) {
+
+		document.write ('<script type="text/javascript" src="js/plugins.js" ></sc' + 'ript>');
+
+			function detectCity() {
+			 var geolocation = ymaps.geolocation;
+			 cityName = geolocation.city;
+			 }
+			 $(function () {
+			 ymaps.ready(detectCity);
+			 });
+
+			var vPlayer = null;
+			$(function() {
+					new showTips("сумму 1999р", "сумму 1999р");
+					new addDeliveryPopup();
+				});
+		};
+			</script>
+</head>
+<body>
+	
+</body>
+</html>
